@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-void-900 text-white overflow-x-hidden;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-void-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-cosmic-600 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-cosmic-500;
+  }
+
+  ::selection {
+    @apply bg-cosmic-600/40 text-white;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+
+  .glass-card-hover {
+    @apply glass-card hover:bg-white/10 hover:border-cosmic-500/30 transition-all duration-300;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-cosmic-400 via-nebula-400 to-cosmic-400 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-aurora {
+    @apply bg-gradient-to-r from-aurora-400 to-cosmic-400 bg-clip-text text-transparent;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-20 md:py-28;
+  }
+
+  .glow-border {
+    @apply border border-cosmic-500/50 shadow-[0_0_15px_rgba(100,113,241,0.3)];
+  }
+
+  .cosmic-btn {
+    @apply relative px-6 py-3 rounded-xl font-semibold text-sm tracking-wide transition-all duration-300
+           bg-gradient-to-r from-cosmic-600 to-nebula-600 hover:from-cosmic-500 hover:to-nebula-500
+           shadow-[0_0_20px_rgba(100,113,241,0.4)] hover:shadow-[0_0_30px_rgba(100,113,241,0.6)]
+           transform hover:-translate-y-0.5;
+  }
+
+  .outline-btn {
+    @apply relative px-6 py-3 rounded-xl font-semibold text-sm tracking-wide transition-all duration-300
+           border border-cosmic-500/50 text-cosmic-300 hover:bg-cosmic-500/10 hover:border-cosmic-400
+           hover:shadow-[0_0_20px_rgba(100,113,241,0.3)] transform hover:-translate-y-0.5;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-center text-gray-400 max-w-2xl mx-auto mb-16 text-base md:text-lg;
+  }
+
+  .tag {
+    @apply text-xs font-semibold px-3 py-1 rounded-full
+           bg-cosmic-600/20 text-cosmic-300 border border-cosmic-600/30;
+  }
+}
+
+@layer utilities {
+  .text-shadow-glow {
+    text-shadow: 0 0 30px rgba(100, 113, 241, 0.8), 0 0 60px rgba(100, 113, 241, 0.4);
+  }
+
+  .text-shadow-nebula {
+    text-shadow: 0 0 30px rgba(168, 85, 247, 0.8), 0 0 60px rgba(168, 85, 247, 0.4);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Animated gradient background */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* Scanline effect */
+.scanlines::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  pointer-events: none;
+}
+
+/* Loader bar */
+@keyframes loaderBar {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.loader-bar {
+  animation: loaderBar 3s ease-in-out forwards;
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Particle float */
+@keyframes particleFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.6; }
+  50% { transform: translateY(-30px) rotate(180deg); opacity: 1; }
+}
+
+.particle-float {
+  animation: particleFloat var(--duration, 8s) ease-in-out var(--delay, 0s) infinite;
+}
+
+/* Orbit rings */
+@keyframes orbitRing {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Pulse ring */
+@keyframes pulseRing {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(100, 113, 241, 0.4); }
+  70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(100, 113, 241, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(100, 113, 241, 0); }
+}
+
+.pulse-ring {
+  animation: pulseRing 2.5s ease-out infinite;
+}
