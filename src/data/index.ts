@@ -20,8 +20,8 @@ export const personalInfo = {
 
 export const journeySteps = [
   { label: 'Mechanical & Automation Engineering', icon: '⚙️', color: 'from-gray-500 to-gray-600' },
-  { label: 'Data Science', icon: '📊', color: 'from-blue-500 to-blue-600' },
-  { label: 'Machine Learning', icon: '🤖', color: 'from-cosmic-500 to-cosmic-600' },
+  { label: 'Machine Learning & Big Data Foundations', icon: '📊', color: 'from-blue-500 to-blue-600' },
+  { label: 'AI & Data Science Exploration', icon: '🔬', color: 'from-cosmic-500 to-cosmic-600' },
   { label: 'AI Engineering', icon: '🧠', color: 'from-nebula-500 to-nebula-600' },
 ];
 
