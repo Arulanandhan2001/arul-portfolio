@@ -12,14 +12,14 @@ export const personalInfo = {
   profileImage: './images/arul.jpeg',
   typingRoles: ['AI Engineer', 'LLM Engineer', 'Generative AI Developer', 'Edge AI Enthusiast'],
   about: [
-    'AI Engineer with hands-on experience in developing intelligent applications using Machine Learning, Deep Learning, Large Language Models, Retrieval-Augmented Generation, and Conversational AI technologies.',
-    'Skilled in designing, fine-tuning, and deploying AI solutions across cloud and edge environments, with expertise in prompt engineering, information retrieval systems, computer vision, speech technologies, and AI model optimization.',
-    'Passionate about transforming complex challenges into practical AI-driven solutions while embracing the philosophy of Engineering Intelligence Through Intelligence.',
+    'My journey began with a Bachelor\'s degree in Mechanical and Automation Engineering, where academic exposure to Machine Learning, Data Analytics, and Big Data sparked a genuine curiosity about intelligent systems and data-driven technologies. That foundation gradually guided me toward Data Science and Machine Learning — not as a sudden switch, but as a natural evolution driven by curiosity and hands-on exploration.',
+    'Over time, that path deepened into AI Engineering. Today, I work across Large Language Models, Retrieval-Augmented Generation, Conversational AI, Computer Vision, Speech Technologies, and Edge AI — building practical, production-ready solutions that bridge research and real-world impact.',
+    'Skilled in designing, fine-tuning, and deploying AI solutions across cloud and edge environments, with strengths in prompt engineering, information retrieval systems, AI model optimization, and multimodal system development. I approach every challenge with the belief that the most powerful technology is the kind that works quietly and reliably in the real world.',
   ],
 };
 
 export const journeySteps = [
-  { label: 'Mechanical Engineering', icon: '⚙️', color: 'from-gray-500 to-gray-600' },
+  { label: 'Mechanical & Automation Engineering', icon: '⚙️', color: 'from-gray-500 to-gray-600' },
   { label: 'Data Science', icon: '📊', color: 'from-blue-500 to-blue-600' },
   { label: 'Machine Learning', icon: '🤖', color: 'from-cosmic-500 to-cosmic-600' },
   { label: 'AI Engineering', icon: '🧠', color: 'from-nebula-500 to-nebula-600' },
